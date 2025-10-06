@@ -10,13 +10,16 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900">
-              <Smartphone className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-slate-900">Brainy Access Systems</span>
+          <div className="flex items-center space-x-2 bg-primary rounded-md p-1">
+						<Image
+							src="/yama-logo-tmp.png?height=32&width=400"
+							width="400"
+							height="32"
+							alt="Yama"
+							className="h-8 w-auto"
+						/>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link
@@ -31,12 +34,6 @@ export default function LandingPage() {
             >
               How It Works
             </Link>
-            <Link
-              href="#testimonials"
-              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              Reviews
-            </Link>
             <Button className="bg-slate-900 hover:bg-slate-800 transition-colors">Get Quote</Button>
           </nav>
         </div>
@@ -44,50 +41,44 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4 animate-in fade-in-50 duration-1000">
                 <div className="space-y-2">
-                  <Badge variant="outline" className="w-fit">
-                    Smart Building Technology
-                  </Badge>
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Transform Your Old Intercom Into a <span className="text-accent">Smart Access System</span>
+                    Transform Your Old Intercom Into a <span className="bg-accent rounded-lg px-2 py-0 text-accent-foreground whitespace-nowrap leading-[1.5]">Smart Access System</span>
                   </h1>
                   <p className="max-w-[600px] text-slate-600 md:text-xl">
-                    Upgrade your outdated dialer-based intercom system with modern smart technology. Enhanced security,
+                    Upgrade your outdated dialer-based intercom system without a hardware switch. Enhanced security,
                     remote access, and seamless integration with your building management.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button size="lg" className="bg-slate-900 hover:bg-slate-800 transition-all hover:scale-105">
-                    Schedule Assessment
+                    Schedule a Call
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="lg" className="hover:bg-slate-50 transition-colors bg-transparent">
-                    View Demo
                   </Button>
                 </div>
                 <div className="flex items-center space-x-4 text-sm text-slate-600">
                   <div className="flex items-center space-x-1">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>Free Assessment</span>
+                    <span>Virtual Doors</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>Professional Installation</span>
+                    <span>Web-based Door Assignments</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>1-Year Warranty</span>
+                    <span>Broad Integrations</span>
                   </div>
                 </div>
               </div>
               <div className="flex items-center justify-center animate-in fade-in-50 duration-1000 delay-300">
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/wireframe-building.png?height=400&width=400"
                     width="400"
                     height="400"
                     alt="Smart Intercom System"
@@ -106,14 +97,14 @@ export default function LandingPage() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-background-alt">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <Badge variant="outline">Why Upgrade?</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">From Outdated to Outstanding</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">The Yama Difference</h2>
                 <p className="max-w-[900px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Replace your old dialer system with cutting-edge smart technology that enhances security, convenience,
+                  Replace your old intercom system with cutting-edge smart technology that enhances security, convenience,
                   and building management.
                 </p>
               </div>
@@ -126,7 +117,7 @@ export default function LandingPage() {
                   </div>
                   <h3 className="text-xl font-bold">Smart Integration</h3>
                   <p className="text-center text-slate-600">
-                    Connect with smartphones, tablets, and building management systems for seamless access control.
+                    Connect with your building management systems for seamless access control.
                   </p>
                 </CardContent>
               </Card>
@@ -137,7 +128,7 @@ export default function LandingPage() {
                   </div>
                   <h3 className="text-xl font-bold">Enhanced Security</h3>
                   <p className="text-center text-slate-600">
-                    Advanced encryption, access logs, and remote monitoring keep your building secure 24/7.
+                    Rotating keys, audit logs, and easy management keep your building secure 24/7.
                   </p>
                 </CardContent>
               </Card>
@@ -146,9 +137,9 @@ export default function LandingPage() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors">
                     <Zap className="h-8 w-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold">Easy Installation</h3>
+                  <h3 className="text-xl font-bold">Easy Setup</h3>
                   <p className="text-center text-slate-600">
-                    Professional installation that works with your existing wiring. Minimal disruption, maximum results.
+										Simply point you old intercom at Yama's smart numbers and experience access control simplified.
                   </p>
                 </CardContent>
               </Card>
@@ -175,28 +166,26 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold">Assessment</h3>
                 <p className="text-slate-600">
-                  We evaluate your current intercom system and building requirements to design the perfect smart upgrade
-                  solution.
+									We evaluate your current dialer intercom to see if it's a candidate for a Yama upgrade.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center group">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-900 text-white font-bold text-xl group-hover:scale-110 transition-transform">
                   2
                 </div>
-                <h3 className="text-xl font-bold">Installation</h3>
+                <h3 className="text-xl font-bold">Onboarding</h3>
                 <p className="text-slate-600">
-                  Professional installation using existing wiring where possible. Clean, efficient, and minimally
-                  disruptive.
+									Use the Yama web interface to associate tenant phone numbers with doors. Set up advanced
+									access controls, or integrate with your existing property manegement systems.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center group">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-900 text-white font-bold text-xl group-hover:scale-110 transition-transform">
                   3
                 </div>
-                <h3 className="text-xl font-bold">Activation</h3>
+                <h3 className="text-xl font-bold">Switch</h3>
                 <p className="text-slate-600">
-                  System setup, user training, and ongoing support to ensure you get the most from your smart access
-                  system.
+									Point your existing dialer to the associated Yama numbers, and enjoy the comfort of a smart access system.
                 </p>
               </div>
             </div>
@@ -204,7 +193,7 @@ export default function LandingPage() {
         </section>
 
         {/* Before/After Comparison */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-background-alt">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <Badge variant="outline">Transformation</Badge>
@@ -224,11 +213,11 @@ export default function LandingPage() {
                     </li>
                     <li className="flex items-center space-x-2">
                       <div className="h-2 w-2 bg-red-500 rounded-full"></div>
-                      <span className="text-slate-600">No remote access</span>
+                      <span className="text-slate-600">No maintenance credentials</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <div className="h-2 w-2 bg-red-500 rounded-full"></div>
-                      <span className="text-slate-600">Difficult maintenance</span>
+                      <span className="text-slate-600">Difficult move in/out</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <div className="h-2 w-2 bg-red-500 rounded-full"></div>
@@ -241,16 +230,16 @@ export default function LandingPage() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <Smartphone className="h-6 w-6 text-green-500" />
-                    <h3 className="text-xl font-bold text-green-700">Smart Access System</h3>
+                    <h3 className="text-xl font-bold text-green-700">Yama</h3>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-slate-600">Video calling & monitoring</span>
+                      <span className="text-slate-600">Smart keys and Integrations</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-slate-600">Remote access control</span>
+                      <span className="text-slate-600">Easy/auditable access for maintenance/cleaning</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
@@ -267,109 +256,31 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <Badge variant="outline">Customer Reviews</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="space-y-4 p-0">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-600">
-                    "The upgrade was seamless and the new system is incredible. Remote access has made property
-                    management so much easier."
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 bg-slate-200 rounded-full"></div>
-                    <div>
-                      <p className="font-medium">Sarah Johnson</p>
-                      <p className="text-sm text-slate-600">Property Manager</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="space-y-4 p-0">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-600">
-                    "Professional installation and excellent support. Our old dialer system was replaced in just one
-                    day."
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 bg-slate-200 rounded-full"></div>
-                    <div>
-                      <p className="font-medium">Mike Chen</p>
-                      <p className="text-sm text-slate-600">Building Owner</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="space-y-4 p-0">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-600">
-                    "The security features and access logs give us peace of mind. Best investment we've made for our
-                    building."
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 bg-slate-200 rounded-full"></div>
-                    <div>
-                      <p className="font-medium">Lisa Rodriguez</p>
-                      <p className="text-sm text-slate-600">Facility Director</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Ready to Upgrade Your Intercom System?
+                  Ready to <span className="text-accent-foreground">Upgrade</span> Your Intercom System?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-slate-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Get a free assessment and quote for your smart access system upgrade. Professional installation with
-                  1-year warranty included.
+									Schedule a call with one of our access control experts, and get ready for reliable, smart access controls without the headache.
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex gap-2">
                   <Input type="email" placeholder="Enter your email" className="flex-1 bg-white text-slate-900" />
-                  <Button type="submit" variant="secondary" className="hover:bg-slate-200 transition-colors">
-                    Get Quote
-                  </Button>
                 </form>
-                <p className="text-xs text-slate-400">Free assessment • No obligation • Professional consultation</p>
+                <p className="text-xs text-slate-400">Free assessment • No obligation • Learn more</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-slate-900 transition-colors bg-transparent"
+                  className="border-white text-accent-foreground hover:bg-white hover:text-slate-900 transition-colors bg-transparent"
                 >
-                  Schedule Assessment
+                  Schedule a Call
                 </Button>
                 <Button size="lg" variant="secondary" className="hover:bg-slate-200 transition-colors">
                   Call (555) 123-4567
@@ -382,7 +293,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-slate-600">© 2024 Brainy Access Systems. All rights reserved.</p>
+        <p className="text-xs text-slate-600">© 2025 Yama Inc. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4 text-slate-600">
             Privacy Policy
