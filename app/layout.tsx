@@ -5,9 +5,8 @@ import '@fontsource-variable/manrope';
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Yama Access',
+  description: 'Your partner in Access Control',
 }
 
 export default function RootLayout({
