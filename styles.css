@@ -318,6 +318,11 @@ a {
     padding: 0.5rem;
 }
 
+.mobile-menu-btn button,
+#mobile-menu-btn {
+    color: var(--color-dark);
+}
+
 @media (min-width: 768px) {
     .mobile-menu-btn {
         display: none;
