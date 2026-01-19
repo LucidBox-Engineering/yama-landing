@@ -895,6 +895,11 @@ a {
     font-size: 1.125rem;
     color: var(--color-dark);
     list-style: none;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover, .faq-item[open] .faq-question {
+    background-color: var(--color-neutral-100);
 }
 
 .faq-question::-webkit-details-marker {
