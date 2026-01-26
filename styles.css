@@ -1093,3 +1093,475 @@ a {
     font-size: 0.875rem;
     color: var(--color-neutral-500);
 }
+
+/* ========================================
+   Decorative Elements & Enhanced Styling
+   ======================================== */
+
+/* Hero Section Decorations */
+.resident-hero {
+    position: relative;
+    overflow: visible;
+}
+
+.hero-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.06;
+}
+
+.hero-decor img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-decor-1 {
+    top: 6rem;
+    right: -2rem;
+    width: 80px;
+    transform: rotate(15deg);
+    animation: float 8s ease-in-out infinite;
+    --rotate: 15deg;
+}
+
+.hero-decor-2 {
+    bottom: 4rem;
+    left: 2rem;
+    width: 60px;
+    transform: rotate(-10deg);
+    animation: float 10s ease-in-out infinite 1s;
+    --rotate: -10deg;
+}
+
+.hero-decor-3 {
+    top: 50%;
+    right: 10%;
+    width: 200px;
+    transform: translateY(-50%);
+    opacity: 0.03;
+}
+
+@media (min-width: 768px) {
+    .hero-decor-1 {
+        width: 120px;
+        right: 5%;
+    }
+
+    .hero-decor-2 {
+        width: 80px;
+        left: 5%;
+    }
+
+    .hero-decor-3 {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-decor-1 {
+        width: 150px;
+        top: 10rem;
+    }
+
+    .hero-decor-3 {
+        width: 500px;
+        right: 5%;
+    }
+}
+
+/* Hero image with mask effect */
+.resident-hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image-mask {
+    position: relative;
+    border-radius: 75px;
+    overflow: hidden;
+}
+
+.hero-image-mask::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(227, 200, 189, 0.15) 0%,
+        transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-image-mask .hero-image {
+    border-radius: 75px;
+    width: 100%;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(var(--rotate, 0deg));
+    }
+    50% {
+        transform: translateY(-15px) rotate(var(--rotate, 0deg));
+    }
+}
+
+/* Impact Section Decorations */
+.resident-impact {
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.impact-decor img {
+    width: 100%;
+    height: auto;
+}
+
+.impact-decor-1 {
+    bottom: -100px;
+    right: -200px;
+    width: 600px;
+    opacity: 0.04;
+}
+
+@media (min-width: 768px) {
+    .impact-decor-1 {
+        width: 800px;
+        bottom: -150px;
+        right: -250px;
+    }
+}
+
+/* Stat cards with more playful styling */
+.resident-stat-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resident-stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(227, 200, 189, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resident-stat-card:hover::before {
+    opacity: 1;
+}
+
+.resident-stat-card:hover {
+    transform: translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* How It Works Section Decorations */
+.resident-how-it-works {
+    position: relative;
+    overflow: hidden;
+}
+
+.how-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.how-decor img {
+    width: 100%;
+    height: auto;
+}
+
+.how-decor-1 {
+    top: 50%;
+    left: -150px;
+    width: 300px;
+    transform: translateY(-50%);
+    opacity: 0.04;
+}
+
+@media (min-width: 768px) {
+    .how-decor-1 {
+        width: 400px;
+        left: -200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .how-decor-1 {
+        width: 500px;
+        left: -250px;
+    }
+}
+
+/* Step cards with organic feel */
+.resident-steps-grid .step-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.resident-steps-grid .step-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg,
+        var(--color-clay-rose-base) 0%,
+        var(--color-clay-rose-60) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.resident-steps-grid .step-card:hover::after {
+    transform: scaleX(1);
+}
+
+.resident-steps-grid .step-number {
+    background: linear-gradient(135deg,
+        var(--color-clay-rose-20) 0%,
+        var(--color-clay-rose-40) 100%);
+}
+
+/* Features Section Decorations */
+.resident-features {
+    position: relative;
+    overflow: hidden;
+}
+
+.features-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.features-decor img {
+    width: 100%;
+    height: auto;
+}
+
+.features-decor-1 {
+    top: 10%;
+    right: -300px;
+    width: 600px;
+    opacity: 0.03;
+}
+
+.features-decor-2 {
+    bottom: 15%;
+    left: -50px;
+    width: 100px;
+    opacity: 0.05;
+    animation: float 12s ease-in-out infinite;
+    --rotate: -5deg;
+}
+
+@media (min-width: 768px) {
+    .features-decor-1 {
+        width: 800px;
+        right: -400px;
+    }
+
+    .features-decor-2 {
+        width: 140px;
+        left: -30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-decor-1 {
+        width: 1000px;
+        right: -450px;
+        top: 5%;
+    }
+
+    .features-decor-2 {
+        width: 180px;
+        left: 2%;
+    }
+}
+
+/* Feature cards with softer appearance */
+.resident-features-grid .feature-card {
+    position: relative;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+
+.resident-features-grid .feature-card:nth-child(odd) {
+    transform: rotate(-0.5deg);
+}
+
+.resident-features-grid .feature-card:nth-child(even) {
+    transform: rotate(0.5deg);
+}
+
+.resident-features-grid .feature-card:hover {
+    transform: rotate(0) translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(33, 33, 43, 0.15);
+}
+
+.resident-features-grid .feature-icon {
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+        var(--color-dark-forest-base) 0%,
+        var(--color-dark-forest-80) 100%);
+}
+
+/* CTA Section Decorations */
+.resident-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-decor img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-decor-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    opacity: 0.03;
+}
+
+@media (min-width: 768px) {
+    .cta-decor-1 {
+        width: 1400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cta-decor-1 {
+        width: 1800px;
+    }
+}
+
+/* CTA content overlay styling */
+.resident-cta .cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* CTA button with softer hover */
+.resident-cta .btn-cta-outline {
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.resident-cta .btn-cta-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(227, 200, 189, 0.4);
+}
+
+/* Input with softer appearance */
+.resident-cta .cta-input {
+    border-radius: 50px;
+    padding: 0.875rem 1.5rem;
+}
+
+/* FAQ Section background pattern */
+.faq-section {
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(227, 200, 189, 0.08) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(227, 200, 189, 0.06) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+/* Softer shadows for hero image */
+.resident-hero .hero-image {
+    box-shadow:
+        0 25px 50px -12px rgba(33, 33, 43, 0.2),
+        0 0 0 1px rgba(227, 200, 189, 0.1);
+}
+
+/* Accent line decoration for section titles */
+.resident-how-it-works .section-title,
+.resident-features .features-title {
+    position: relative;
+    display: inline-block;
+}
+
+.resident-how-it-works .section-title::after,
+.resident-features .features-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg,
+        var(--color-clay-rose-base) 0%,
+        transparent 100%);
+    border-radius: 2px;
+}
+
+.resident-how-it-works .section-header {
+    text-align: center;
+}
+
+.resident-how-it-works .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Smooth scroll enhancement */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-decor,
+    .features-decor-2 {
+        will-change: transform;
+    }
+}
+
+/* Disable animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-decor,
+    .features-decor-2 {
+        animation: none;
+    }
+
+    .resident-features-grid .feature-card:nth-child(odd),
+    .resident-features-grid .feature-card:nth-child(even) {
+        transform: none;
+    }
+
+    .resident-features-grid .feature-card:hover {
+        transform: none;
+    }
+}
