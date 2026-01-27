@@ -85,10 +85,12 @@ html {
     background-color: var(--color-offwhite);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 img,
