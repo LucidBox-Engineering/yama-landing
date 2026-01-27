@@ -307,13 +307,19 @@ a {
 
 .mobile-menu-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-dark);
     padding: 0.5rem;
 }
 
 .mobile-menu-btn button,
 #mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-dark);
+    padding: 0.5rem;
 }
 
 @media (min-width: 768px) {
