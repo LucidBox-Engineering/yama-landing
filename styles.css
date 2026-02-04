@@ -1130,7 +1130,6 @@ a {
     width: 80px;
     transform: rotate(15deg);
     animation: float 8s ease-in-out infinite;
-    --rotate: 15deg;
 }
 
 .hero-decor-2 {
@@ -1139,7 +1138,6 @@ a {
     width: 60px;
     transform: rotate(-10deg);
     animation: float 10s ease-in-out infinite 1s;
-    --rotate: -10deg;
 }
 
 .hero-decor-3 {
@@ -1214,7 +1212,7 @@ a {
         transform: translateY(0) rotate(var(--rotate, 0deg));
     }
     50% {
-        transform: translateY(-15px) rotate(var(--rotate, 0deg));
+        transform: translateY(-15px) translateX(-10px) rotate(var(--rotate, 0deg));
     }
 }
 
@@ -1378,7 +1376,6 @@ a {
     width: 100px;
     opacity: 0.05;
     animation: float 12s ease-in-out infinite;
-    --rotate: -5deg;
 }
 
 @media (min-width: 768px) {
@@ -1577,7 +1574,6 @@ a {
     width: 50px;
     transform: rotate(45deg);
     animation: floatSpin 15s ease-in-out infinite;
-    --rotate: 45deg;
 }
 
 .hero-decor-5 {
@@ -1586,7 +1582,6 @@ a {
     width: 40px;
     transform: rotate(-20deg);
     animation: bounce 6s ease-in-out infinite;
-    --rotate: -20deg;
 }
 
 @media (min-width: 768px) {
@@ -1751,7 +1746,6 @@ a {
     width: 150px;
     opacity: 0.04;
     animation: float 12s ease-in-out infinite 3s;
-    --rotate: 30deg;
 }
 
 @media (min-width: 768px) {
@@ -1768,7 +1762,6 @@ a {
     width: 120px;
     opacity: 0.04;
     animation: bounce 9s ease-in-out infinite 2s;
-    --rotate: -15deg;
 }
 
 @media (min-width: 768px) {
@@ -1805,7 +1798,6 @@ a {
     width: 60px;
     opacity: 0.04;
     animation: floatSpin 14s ease-in-out infinite;
-    --rotate: 25deg;
 }
 
 @media (min-width: 768px) {
@@ -1852,7 +1844,6 @@ a {
     width: 100px;
     opacity: 0.04;
     animation: float 11s ease-in-out infinite;
-    --rotate: 20deg;
 }
 
 .faq-decor-2 {
@@ -1861,7 +1852,6 @@ a {
     width: 80px;
     opacity: 0.04;
     animation: bounce 8s ease-in-out infinite 1.5s;
-    --rotate: -25deg;
 }
 
 @media (min-width: 768px) {
@@ -1882,7 +1872,6 @@ a {
     width: 60px;
     opacity: 0.04;
     animation: float 9s ease-in-out infinite;
-    --rotate: 35deg;
 }
 
 .cta-decor-3 {
@@ -1891,7 +1880,6 @@ a {
     width: 50px;
     opacity: 0.04;
     animation: bounce 7s ease-in-out infinite 2s;
-    --rotate: -30deg;
 }
 
 @media (min-width: 768px) {
