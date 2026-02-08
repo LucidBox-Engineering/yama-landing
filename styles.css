@@ -14,6 +14,8 @@
     --color-dark-forest-40: #9E9EA2;
     --color-dark-forest-20: #C8C8CA;
 
+    --color-dark-forest-90: #2C2C35;
+
     --color-white-base: #FFFFFF;
 
     --color-clay-rose-base: #E3C8BD;
@@ -873,7 +875,7 @@ a {
     overflow: hidden;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    background-color: var(--color-white);
+    background-color: var(--color-dark-forest);
 }
 
 .features-header {
@@ -884,7 +886,7 @@ a {
 .features-title {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--color-white);
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
@@ -905,7 +907,7 @@ a {
 
 .features-subtitle {
     font-size: 1.25rem;
-    color: var(--color-neutral-500);
+    color: var(--color-neutral-400);
 }
 
 .features-grid {
@@ -929,7 +931,7 @@ a {
     position: relative;
     padding: 2rem;
     border-radius: 2rem;
-    background-color: var(--color-dark-forest);
+    background-color: var(--color-dark-forest-90);
     transition: all 0.3s ease;
 }
 
@@ -1148,7 +1150,7 @@ a {
     border-radius: 50px;
     border: 1px solid transparent;
     font-size: 0.875rem;
-    outline: none;
+    outline: var(--color-brand);
     transition: var(--transition-base);
 }
 
@@ -1377,6 +1379,7 @@ a {
 .impact-decor img {
     width: 100%;
     height: auto;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(13%) saturate(500%) hue-rotate(330deg) brightness(97%) contrast(90%);
 }
 
 .impact-decor-1 {
@@ -1438,6 +1441,7 @@ a {
 .features-decor img {
     width: 100%;
     height: auto;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(13%) saturate(500%) hue-rotate(330deg) brightness(97%) contrast(90%);
 }
 
 .features-decor-1 {
@@ -1560,16 +1564,12 @@ a {
     top: 40%;
     left: -3rem;
     width: 50px;
-    transform: rotate(45deg);
-    animation: floatSpin 15s ease-in-out infinite;
 }
 
 .hero-decor-5 {
     bottom: 20%;
     right: 15%;
     width: 40px;
-    transform: rotate(-20deg);
-    animation: bounce 6s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {
@@ -1579,32 +1579,6 @@ a {
     }
     .hero-decor-5 {
         width: 55px;
-    }
-}
-
-/* Bounce animation */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0) rotate(var(--rotate, 0deg));
-    }
-    50% {
-        transform: translateY(-25px) rotate(var(--rotate, 0deg));
-    }
-}
-
-/* Float with spin animation */
-@keyframes floatSpin {
-    0%, 100% {
-        transform: translateY(0) rotate(var(--rotate, 0deg));
-    }
-    25% {
-        transform: translateY(-10px) rotate(calc(var(--rotate, 0deg) + 5deg));
-    }
-    50% {
-        transform: translateY(-20px) rotate(var(--rotate, 0deg));
-    }
-    75% {
-        transform: translateY(-10px) rotate(calc(var(--rotate, 0deg) - 5deg));
     }
 }
 
@@ -1656,74 +1630,6 @@ a {
 @media (min-width: 768px) {
     .wave-divider svg {
         height: 80px;
-    }
-}
-
-/* Impact section bubbles */
-.impact-bubbles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.bubble {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, rgba(227, 200, 189, 0.2), rgba(227, 200, 189, 0.05));
-    border: 1px solid rgba(227, 200, 189, 0.1);
-}
-
-.bubble-1 {
-    width: 80px;
-    height: 80px;
-    top: 20%;
-    right: 10%;
-    animation: bubbleFloat 8s ease-in-out infinite;
-}
-
-.bubble-2 {
-    width: 50px;
-    height: 50px;
-    bottom: 30%;
-    left: 5%;
-    animation: bubbleFloat 10s ease-in-out infinite 2s;
-}
-
-.bubble-3 {
-    width: 30px;
-    height: 30px;
-    top: 60%;
-    right: 25%;
-    animation: bubbleFloat 7s ease-in-out infinite 1s;
-}
-
-@keyframes bubbleFloat {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: translateY(-20px) scale(1.05);
-        opacity: 0.8;
-    }
-}
-
-@media (min-width: 768px) {
-    .bubble-1 {
-        width: 120px;
-        height: 120px;
-    }
-    .bubble-2 {
-        width: 80px;
-        height: 80px;
-    }
-    .bubble-3 {
-        width: 50px;
-        height: 50px;
     }
 }
 
@@ -1785,7 +1691,6 @@ a {
     right: 8%;
     width: 60px;
     opacity: 0.04;
-    animation: floatSpin 14s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {
@@ -2021,7 +1926,6 @@ a {
 
 /* Enhanced reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    .bubble,
     .sparkle,
     .hero-decor-4,
     .hero-decor-5,
@@ -2041,5 +1945,411 @@ a {
 
     .feature-card:hover .feature-icon {
         animation: none;
+    }
+}
+.audience-section {
+    padding: 4rem 0;
+    background-color: var(--color-offwhite);
+    position: relative;
+    overflow: hidden;
+}
+
+.audience-section .features-decor img {
+    filter: none;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.audience-card {
+    background: #fff;
+    border: 1px solid var(--color-dark-20, #C8C8CA);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audience-card:hover {
+    border-color: var(--color-accent, #E3C8BD);
+    box-shadow: 0 4px 24px rgba(33, 33, 43, 0.08);
+}
+
+.audience-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-accent-20, #F0E9E7);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.audience-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-dark, #21212B);
+}
+
+.audience-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark, #21212B);
+    margin-bottom: 0.75rem;
+}
+
+.audience-card-desc {
+    color: var(--color-dark-60, #75757B);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.audience-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-dark, #21212B);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-dark, #21212B);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.audience-card-link:hover {
+    background: var(--color-dark, #21212B);
+    color: #fff;
+}
+
+.audience-card-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ========================================
+   Dark Mode (prefers-color-scheme: dark)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+
+    /* ---- Base ---- */
+    html {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-clay-rose-20);
+    }
+    
+
+    /* ---- Audience ---- */
+    .audience-section {
+        background-color: var(--color-dark-forest-base);
+    }
+
+    .audience-card {
+        background: #2D2D38;
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .audience-card:hover {
+        border-color: var(--color-clay-rose-base, #E3C8BD);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .audience-card-title {
+        color: #FFFFFF;
+    }
+
+    .audience-card-desc {
+        color: #C8C8CA;
+    }
+
+    .audience-icon {
+        background: rgba(227, 200, 189, 0.1);
+    }
+
+    .audience-icon svg {
+        stroke: #E3C8BD;
+    }
+
+    .audience-card-link {
+        color: #E3C8BD;
+        border-color: #E3C8BD;
+    }
+
+    .audience-card-link:hover {
+        background: #E3C8BD;
+        color: #21212B;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+        background-color: rgba(33, 33, 43, 0.9);
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-link {
+        color: var(--color-dark-forest-20);
+    }
+
+    .nav-link:hover {
+        color: var(--color-white-base);
+    }
+
+    .btn-primary {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-clay-rose-base);
+        border: 1px solid var(--color-clay-rose-base);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--color-clay-rose-base);
+        color: var(--color-dark-forest-base);
+        transform: none;
+    }
+
+    .mobile-menu-btn,
+    .mobile-menu-btn button,
+    #mobile-menu-btn {
+        color: var(--color-clay-rose-base);
+    }
+
+    .mobile-menu {
+        background-color: var(--color-dark-forest-base);
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-nav-link {
+        color: var(--color-dark-forest-20);
+    }
+
+    .btn-mobile {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-clay-rose-base);
+        border: 1px solid var(--color-clay-rose-base);
+    }
+
+    /* ---- Hero Section ---- */
+    .hero {
+        background-color: var(--color-dark-forest-base);
+    }
+
+    .hero-title {
+        color: var(--color-white-base);
+    }
+
+    .hero-title-emphasis {
+        background-color: revert;
+        padding: revert;
+        line-height: revert;
+    }
+
+    .hero-subtitle {
+        color: var(--color-dark-forest-20);
+    }
+
+    .hero-decor img {
+        filter: brightness(0) saturate(100%) invert(85%) sepia(13%) saturate(500%) hue-rotate(330deg) brightness(97%) contrast(90%);
+    }
+
+    .badge-text {
+        color: var(--color-dark-forest-20);
+    }
+
+    .btn-hero-primary {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-clay-rose-base);
+        border: 1px solid var(--color-clay-rose-base);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-hero-primary:hover {
+        background-color: var(--color-clay-rose-base);
+        color: var(--color-dark-forest-base);
+    }
+
+    .btn-hero-secondary {
+        background-color: transparent;
+        color: var(--color-clay-rose-base);
+        border-color: var(--color-clay-rose-base);
+    }
+
+    .btn-hero-secondary:hover {
+        background-color: var(--color-clay-rose-base);
+        color: var(--color-dark-forest-base);
+    }
+
+    .hero-image {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(227, 200, 189, 0.1);
+    }
+
+    /* ---- Impact Section (dark → slightly lighter) ---- */
+    .impact {
+        background-color: var(--color-dark-forest-90);
+    }
+
+    /* ---- How It Works Section ---- */
+    .how-it-works {
+        background-color: var(--color-dark-forest-base);
+    }
+
+    .how-decor img {
+        filter: brightness(0) saturate(100%) invert(85%) sepia(13%) saturate(500%) hue-rotate(330deg) brightness(97%) contrast(90%);
+    }
+
+    .section-title {
+        color: var(--color-white-base);
+    }
+
+    .section-subtitle {
+        color: var(--color-dark-forest-20);
+    }
+
+    .steps-line {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .step-card {
+        background-color: var(--color-dark-forest-90);
+        border-color: rgba(255, 255, 255, 0.08);
+        box-shadow: none;
+    }
+
+    .step-title {
+        color: var(--color-white-base);
+    }
+
+    .step-desc {
+        color: var(--color-dark-forest-20);
+    }
+
+    .step-number {
+        color: var(--color-dark-forest-base);
+    }
+
+    /* ---- FAQ Section ---- */
+    .faq-section {
+        background-color: var(--color-dark-forest-base);
+    }
+
+    .faq-section::before {
+        background:
+            radial-gradient(circle at 10% 20%, rgba(227, 200, 189, 0.04) 0%, transparent 30%),
+            radial-gradient(circle at 90% 80%, rgba(227, 200, 189, 0.03) 0%, transparent 30%);
+    }
+
+    .faq-title {
+        color: var(--color-white-base);
+    }
+
+    .faq-item {
+        background-color: var(--color-dark-forest-90);
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .faq-item:hover {
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .faq-item[open] {
+        border-color: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-question {
+        color: var(--color-white-base);
+    }
+
+    .faq-question:hover,
+    .faq-item[open] .faq-question,
+    .faq-question:focus {
+        background-color: #353542;
+    }
+
+    .faq-icon {
+        color: var(--color-dark-forest-40);
+    }
+
+    .faq-answer {
+        color: var(--color-dark-forest-20);
+    }
+
+    .cta-input {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-white-base);
+        border-color: var(--color-dark-forest-80);
+    }
+
+    .cta-input::placeholder {
+        color: var(--color-dark-forest-40);
+    }
+
+    .cta-input:focus {
+        outline: none;
+    }
+
+    .btn-cta-outline {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-clay-rose-base);
+        border-color: var(--color-clay-rose-base);
+    }
+
+    .btn-cta-outline:hover {
+        background-color: var(--color-clay-rose-base);
+        color: var(--color-dark-forest-base);
+        box-shadow: 0 10px 30px -10px rgba(227, 200, 189, 0.3);
+    }
+
+    .btn-cta-secondary {
+        background-color: var(--color-dark-forest-base);
+        color: var(--color-clay-rose-base);
+        border: 1px solid var(--color-clay-rose-base);
+    }
+
+    .btn-cta-secondary:hover {
+        background-color: var(--color-clay-rose-base);
+        color: var(--color-dark-forest-base);
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+        background-color: var(--color-dark-forest-base);
+    }
+
+    .footer-bottom {
+        border-top-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .copyright {
+        color: var(--color-dark-forest-40);
+    }
+
+    /* ---- Wave Dividers ---- */
+    .wave-divider-dark {
+        color: var(--color-dark-forest-90);
+    }
+
+    .wave-divider-light {
+        color: var(--color-dark-forest-base);
+        background-color: var(--color-dark-forest-base);
     }
 }
