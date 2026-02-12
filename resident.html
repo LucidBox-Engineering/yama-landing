@@ -39,10 +39,18 @@
     <nav class="nav" role="navigation">
         <div class="container">
             <div class="nav-content">
-                <!-- Logo -->
-                <a href="#" class="logo" aria-label="Return to top">
-                    <img src="/public/yama-logo.svg" alt="Yama" width="128" height="32" class="logo-img" fetchpriority="high">
-                </a>
+                <div class="nav-left">
+                    <!-- Logo -->
+                    <a href="#" class="logo" aria-label="Return to top">
+                        <img src="/public/yama-logo.svg" alt="Yama" width="128" height="32" class="logo-img" fetchpriority="high">
+                    </a>
+
+                    <!-- Page Toggle -->
+                    <div class="page-toggle">
+                        <a href="commercial.html" class="page-toggle-link">Property Managers</a>
+                        <a href="resident.html" class="page-toggle-link active">Residents</a>
+                    </div>
+                </div>
 
                 <!-- Desktop Menu -->
                 <div class="nav-links">
@@ -69,6 +77,10 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="mobile-menu hidden">
             <div class="mobile-menu-content">
+                <div class="page-toggle page-toggle-mobile">
+                    <a href="commercial.html" class="page-toggle-link">Property Managers</a>
+                    <a href="resident.html" class="page-toggle-link active">Residents</a>
+                </div>
                 <a href="#how-it-works" class="mobile-nav-link">How it Works</a>
                 <a href="#features" class="mobile-nav-link">Features</a>
                 <a href="#faq" class="mobile-nav-link">FAQ</a>
