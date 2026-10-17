@@ -70,11 +70,11 @@ Deliver faster service to tenants while reducing administrative overhead for you
 
 Create unique, scheduled access codes for staff and vendors such as cleaners, maintenance teams, technicians, and property managers.
 
-Control who has access, when they have it, and easily revoke it when work is complete—all from the Yama Web App.
+Control who has access, when they have it, and easily revoke it when work is complete—all from the Yama portal.
 
 ## Key Features
 
-1. **Cloud-based Intercom Management** - Manage your intercom through the Yama Web App, accessible anywhere with an internet connection.
+1. **Cloud-based Intercom Management** - Manage your intercom through the Yama portal, accessible anywhere with an internet connection.
 2. **Instant Remote Updates** - Changes take effect immediately, with no waiting and no intercom reprogramming.
 3. **Multiple Residence Phone Numbers** - Everyone in a single residence can receive intercom calls on their own phone - no intercom reprogramming required.
 4. **Long-Distance Number Support** – Allow tenants to receive intercom calls on any phone number, even if your intercom can’t dial outside its local area code.
@@ -83,7 +83,7 @@ Control who has access, when they have it, and easily revoke it when work is com
 
 ## Getting Started
 
-1. Create your building and its residences and add your intercom’s dial-out number in the Yama Web App.
+1. Create your building and its residences and add your intercom’s dial-out number in the Yama portal.
 2. Yama generates and assigns unique phone numbers to each residence.
 3. Program the Yama phone numbers into your intercom.
 Congratulations - you’ve just programmed your intercom for the last time!
